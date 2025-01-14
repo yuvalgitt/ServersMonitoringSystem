@@ -8,10 +8,15 @@ made by Yuval Dayan
 Phone - 0545562940
 email - ydayan232@gmail.com
 
-Instructions : 
+Instructions how to change target email for alerts :
+1.change directory to C:/path/Servers/Monitoring/System/config
+2. open config.js
+3. change target email
+
+Instructions how to boot : 
 1. open IDE
 2. open terminal
-3. change directoy to C:/path/Servers/Monitoring/System/
+3. change directory to C:/path/Servers/Monitoring/System/
 4. in the terminal type and execute "npm install"
 5. in the terminal type and execute "npm run start"
 6. to test the application - use included postman collection and dumpfile.sql
