@@ -64,13 +64,12 @@ const patchServer = async (server_id, patchBody) => {
     patchBody.username, //4
     patchBody.password, //5
     patchBody.port, //6
-    patchBody.health, //7
-    server_id, //8
+    server_id, //7
   ];
   const queryText = `update servers 
     set 
-    name=$1, server_url=$2, type=$3, username=$4, password = $5, port = $6 , health = $7
-    where server_id =$8`;
+    name=$1, server_url=$2, type=$3, username=$4, password = $5, port = $6 
+    where server_id =$7`;
   try {
     const response = await pgClient.query(queryText, values);
     rowsAffected = response.rowCount;

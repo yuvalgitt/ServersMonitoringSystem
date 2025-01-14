@@ -8,10 +8,9 @@ const { recordConnectionResponse } = require("../services/responseService");
 // this is the bread and butter of this project. Here each function test the server's connection and returns an HTTP code
 const checkHttpServer = async (serverObj) => {
   const { server_url, server_id } = serverObj;
-  
   try {
     const response = await axios.get(server_url, { timeout: 45000 }); //timeout 45 seconds
-
+    
     if (response) {
       recordConnectionResponse(server_id, true); // saves the connection attempt to the database as a successfuly connection
 
