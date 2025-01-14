@@ -110,13 +110,13 @@
 			"response": []
 		},
 		{
-			"name": "adds morfix website to database",
+			"name": "adds milog website to database",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n        \"name\": \"mrofix\",\r\n        \"server_url\": \"https://www.morfix.co.il/\",\r\n        \"type\": \"https\"\r\n    }",
+					"raw": "{\r\n        \"name\": \"milog\",\r\n        \"server_url\": \"https://milog.co.il/\",\r\n        \"type\": \"https\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -138,32 +138,13 @@
 			"response": []
 		},
 		{
-			"name": "removes test website from database and corresponding responses",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "localhost:3000/servers/10",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"servers",
-						"10"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "changes local site name to localhost",
 			"request": {
 				"method": "PATCH",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"localhost\"\r\n}",
+					"raw": "{\r\n    \"name\": \"localhost\",\r\n    \"server_url\" : \"http://localhost:5173/\",\r\n    \"type\" :\"http\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -179,6 +160,25 @@
 					"path": [
 						"servers",
 						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removes test website from database and corresponding responses",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/servers/10",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"servers",
+						"10"
 					]
 				}
 			},
